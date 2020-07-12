@@ -1,10 +1,12 @@
 #!/bin/bash
 
-for subdir in "ftdetect" "syntax"; do
+for subdir in "ftdetect" "ftplugin" "syntax"; do
     mkdir -p ~/.vim/$subdir 2> /dev/null
-    if [ "$1" == "l" ]; then
-        ln -fs $PWD/$subdir/espresso.vim ~/.vim/$subdir
-    else
-        cp $subdir/espresso.vim ~/.vim/$subdir
-    fi
+    for df in $subdir/* ; do
+        if [ "$1" == "-l" ] || [ "$1" == "--link" ]; then
+            ln -fs $PWD/$df ~/.vim/$subdir
+        else
+            cp $df ~/.vim/$subdir
+        fi
+    done
 done
