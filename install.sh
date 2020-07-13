@@ -6,7 +6,7 @@ for subdir in "ftdetect" "ftplugin" "syntax"; do
         if [ "$1" == "-l" ] || [ "$1" == "--link" ]; then
             ln -fs $PWD/$df ~/.vim/$subdir
         else
-            cp $df ~/.vim/$subdir
+            cp -r $df ~/.vim/$subdir
         fi
     done
 done
