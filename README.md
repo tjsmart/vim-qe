@@ -6,16 +6,11 @@
 ```
 
 ## Syntax Highlighting
-![Example syntax higlighting](media/syntax.png)
+![vim-qe syntax demo](https://i.imgur.com/qoRCi8f.png)
 
 ## Autocompletion
 While typing use `<C-p>` and `<C-n>` to cycle through autocomplete options.  
-test1:  
-![](media/autocomplete.mov)  
-test2:  
-<video controls loop>
-    <source src="media/autocomplete.mov" type="video/mp4">
-</video>
+![vim-qe autocompletion demo](https://i.imgur.com/i5vUone.gif)
 
 ### Fix incompatability with YouCompleteMe
 Add this line to your `~/.vimrc` to disable YouCompleteMe for the espresso filetype:
